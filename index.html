@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit Whey Protein + Creatina</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0e0e0e;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #1b1b1b);
+      padding: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .logo {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: bold;
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #00c853;
+      color: white;
+      text-decoration: none;
+      padding: 18px 35px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0, 200, 83, 0.5);
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      background: #00e676;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #00ff88;
+    }
+
+    .content-box {
+      background: #181818;
+      padding: 35px;
+      border-radius: 18px;
+      line-height: 1.8;
+      box-shadow: 0 0 20px rgba(255,255,255,0.04);
+    }
+
+    .content-box p {
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      border-radius: 18px;
+      transition: 0.4s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .flavors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .flavor-item {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #2a2a2a;
+      transition: 0.3s;
+    }
+
+    .flavor-item:hover {
+      background: #00c853;
+      transform: translateY(-5px);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    table th,
+    table td {
+      padding: 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+
+    table th {
+      background: #00c853;
+      color: white;
+    }
+
+    table tr:nth-child(even) {
+      background: #1b1b1b;
+    }
+
+    footer {
+      background: #080808;
+      padding: 30px 20px;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .price {
+        font-size: 28px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+
+      <div class="hero-text fade-in">
+        <img src="growthlogo-1.png" alt="Growth Supplements" class="logo">
+
+        <h1>
+          KIT WHEY PROTEIN CONCENTRADO 1KG E CREATINA MONOHIDRATADA 250G
+        </h1>
+
+        <div class="old-price">De R$179,90</div>
+        <div class="price">Por R$110,90 no PIX ou boleto</div>
+
+        <div style="margin-top:20px; max-width:400px;">
+          <select class="flavor-select" style="width:100%; padding:15px; border-radius:10px; border:none; font-size:16px; margin-bottom:15px; background:#fff; color:#111;">
+            <option value="">Selecione um sabor</option>
+            <option>Sorvete de creme</option>
+            <option>Chocolate</option>
+            <option>Baunilha</option>
+            <option>Natural</option>
+            <option>Banana</option>
+            <option>Cappuccino</option>
+            <option>Doce de Leite</option>
+            <option>Chocolate com Amendoim</option>
+            <option>Caramelo</option>
+            <option>Chocolate com Morango</option>
+            <option>Mousse de Maracujá</option>
+            <option>Torta de Limão</option>
+            <option>Chocolate Milk Shake</option>
+            <option>Chocolate Branco</option>
+            <option>Beijinho</option>
+            <option>Brigadeiro</option>
+            <option>Leite em Pó</option>
+            <option>Morango</option>
+          </select>
+
+          <button class="cta-button buy-button" style="border:none; cursor:pointer; width:100%;">
+            COMPRAR AGORA
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-image fade-in">
+        <img src="img-0.webp" alt="Kit Whey + Creatina">
+      </div>
+
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Transforme Seus Resultados</h2>
+
+      <div class="content-box fade-in">
+        <p>
+          Em busca de mais força, recuperação e evolução muscular? O Kit Whey Protein Concentrado + Creatina Monohidratada 250 g da Growth Supplements é o aliado ideal para quem deseja transformar os treinos em resultados reais.
+        </p>
+
+        <p>
+          Fácil de preparar e incorporar à rotina, é a escolha perfeita para quem quer manter a suplementação sempre em dia.
+        </p>
+
+        <p>
+          Invista em você: garanta já o seu kit na GSuplementos e descubra como a combinação de whey e creatina pode elevar seu treino a um novo nível.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Galeria do Produto</h2>
+
+      <div class="gallery fade-in">
+        <img src="img-2-v2.webp" alt="Produto 1">
+        <img src="img-3.webp" alt="Produto 2">
+        <img src="img-0.webp" alt="Produto 3">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Sabores Disponíveis</h2>
+
+      <div class="flavors fade-in">
+        <div class="flavor-item">Sorvete de creme</div>
+        <div class="flavor-item">Chocolate</div>
+        <div class="flavor-item">Baunilha</div>
+        <div class="flavor-item">Natural</div>
+        <div class="flavor-item">Banana</div>
+        <div class="flavor-item">Cappuccino</div>
+        <div class="flavor-item">Doce de Leite</div>
+        <div class="flavor-item">Chocolate com Amendoim</div>
+        <div class="flavor-item">Caramelo</div>
+        <div class="flavor-item">Chocolate com Morango</div>
+        <div class="flavor-item">Mousse de Maracujá</div>
+        <div class="flavor-item">Torta de Limão</div>
+        <div class="flavor-item">Chocolate Milk Shake</div>
+        <div class="flavor-item">Chocolate Branco</div>
+        <div class="flavor-item">Beijinho</div>
+        <div class="flavor-item">Brigadeiro</div>
+        <div class="flavor-item">Leite em Pó</div>
+        <div class="flavor-item">Morango</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Benefícios do Kit</h2>
+
+      <div class="content-box fade-in">
+        <p>
+          O Whey Protein Concentrado Growth fornece proteínas de alto valor biológico, ricas em aminoácidos essenciais e BCAAs.
+        </p>
+
+        <p>
+          Esses nutrientes são fundamentais para a recuperação muscular após treinos intensos e para estimular a síntese proteica.
+        </p>
+
+        <p>
+          Já a Creatina Monohidratada 250 g atua na produção de energia e mantém os estoques de ATP elevados, garantindo mais força e explosão durante os treinos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Informação Nutricional - Whey</h2>
+
+      <div class="content-box fade-in">
+        <p><strong>Porções por embalagem:</strong> Cerca de 33</p>
+        <p><strong>Porção:</strong> 30 g (2 dosadores)</p>
+
+        <table>
+          <tr>
+            <th>Nutriente</th>
+            <th>Quantidade</th>
+          </tr>
+
+          <tr><td>Valor energético</td><td>124 kcal</td></tr>
+          <tr><td>Carboidratos</td><td>2,3 g</td></tr>
+          <tr><td>Proteínas</td><td>24 g</td></tr>
+          <tr><td>Gorduras totais</td><td>2,1 g</td></tr>
+          <tr><td>Gorduras saturadas</td><td>0,8 g</td></tr>
+          <tr><td>Sódio</td><td>47 mg</td></tr>
+          <tr><td>L-Leucina</td><td>2592 mg</td></tr>
+          <tr><td>L-Isoleucina</td><td>1542 mg</td></tr>
+          <tr><td>L-Valina</td><td>1479 mg</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-in">Informação Nutricional - Creatina</h2>
+
+      <div class="content-box fade-in">
+        <p><strong>Porções por embalagem:</strong> 50</p>
+        <p><strong>Porção:</strong> 5 g (4 dosadores)</p>
+
+        <table>
+          <tr>
+            <th>Nutriente</th>
+            <th>Quantidade</th>
+          </tr>
+
+          <tr>
+            <td>Creatina</td>
+            <td>5000 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title fade-in">Garanta o Seu Agora</h2>
+
+      <a href="https://meucheckout.com.br/compra.php" class="cta-button fade-in">
+        COMPRAR AGORA
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Growth Suplementos Brasil - CNPJ XXXX.XXXX.XXX
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    fadeElements.forEach((el) => observer.observe(el));
+
+    const buyButtons = document.querySelectorAll('.buy-button');
+
+    buyButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const container = button.parentElement;
+        const select = container.querySelector('.flavor-select');
+
+        if (!select.value) {
+          select.focus();
+
+          Swal.fire({
+            icon: 'warning',
+            title: 'Selecione um sabor',
+            text: 'Escolha um sabor antes de continuar a compra.',
+            confirmButtonColor: '#00c853'
+          });
+
+          return;
+        }
+
+        const sabor = encodeURIComponent(select.value);
+        window.location.href = `https://meucheckout.com.br/compra.php?sabor=${sabor}`;
+      });
+    });
+  </script>
+
+</body>
+</html>
